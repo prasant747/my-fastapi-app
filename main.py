@@ -9,6 +9,11 @@ level_encoder = joblib.load('label_encoder.joblib')
 
 app = FastAPI()
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 class InputData(BaseModel):
     input1: float
     input2: str
