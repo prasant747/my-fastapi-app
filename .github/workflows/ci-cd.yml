@@ -41,5 +41,5 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster fastapi_cluster \
-            --service fastapi-service \
+            --service renewal-api-task-service-ks3q6qg8 \
             --force-new-deployment
